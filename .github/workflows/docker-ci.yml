@@ -21,6 +21,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Wait for webserver
+        run: ./wait-for-webserver.sh
+  
       - name: Set up Playwright
         run: npm install -D @playwright/test
       
